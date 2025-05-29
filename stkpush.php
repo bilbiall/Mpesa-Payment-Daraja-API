@@ -10,8 +10,9 @@ $BusinessShortCode = '174379';
 $Timestamp = date('YmdHis');
 // ENCRYPT  DATA TO GET PASSWORD
 $Password = base64_encode($BusinessShortCode . $passkey . $Timestamp);
-$phone = '254707629433';//phone number to receive the stk push
-$money = '1';
+$phone = '254740194858';//phone number to receive the stk push
+//$phone = '254741486334';
+$money = '2';
 $PartyA = $phone;
 $PartyB = '254708374149';
 $AccountReference = 'Vumaa Digital Test';
