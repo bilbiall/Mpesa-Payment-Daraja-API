@@ -3,7 +3,8 @@
 include 'accessToken.php';
 date_default_timezone_set('Africa/Nairobi');
 $processrequestUrl = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest'; //mpesa daraja api merchant express after the get,,the link apo juu
-$callbackurl = 'https://vumaadigital.co.ke/darajaapp/callback.php'; //callback set on my domain ie live server
+//$callbackurl = 'https://vumaadigital.co.ke/darajaapp/callback.php'; //callback set on my domain ie live server
+$callbackurl = 'https://6c33-154-159-254-80.ngrok-free.app/apimpesa/callback.php';//from ngrok for localhost
 $passkey = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919"; //from stimulate in express test credentials
 $BusinessShortCode = '174379';
 $Timestamp = date('YmdHis');
@@ -13,7 +14,7 @@ $phone = '254707629433';//phone number to receive the stk push
 $money = '1';
 $PartyA = $phone;
 $PartyB = '254708374149';
-$AccountReference = 'Vumaa Digital Mpesa Test';
+$AccountReference = 'Vumaa Digital Test';
 $TransactionDesc = 'stkpush test';
 $Amount = $money;
 $stkpushheader = ['Content-Type:application/json', 'Authorization:Bearer ' . $access_token]; //access token used here
