@@ -30,14 +30,14 @@ $data_to = json_decode($curl_response);
 if (isset($data_to->ResultCode)) {
   $ResultCode = $data_to->ResultCode;
   if ($ResultCode == '1037') {
-    $massage = "1037 Timeout in completing the transaction";
+    $message = "1037 Timeout in completing the transaction";
   } elseif ($ResultCode == '1032') {
-    $massage = "1032 Transaction  has bee cancelled by the user";
+    $message = "1032 Transaction  has bee cancelled by the user";
   } elseif ($ResultCode == '1') {
-    $massage = "1 The balance is insufficient for the transaction";
+    $message = "1 The balance is insufficient for the transaction";
   } elseif ($ResultCode == '0') {
-    $massage = "0 The transaction is successfull";
+    $message = "0 The transaction is successfull";
   }
 }
 
-echo $massage;
+echo $message;
